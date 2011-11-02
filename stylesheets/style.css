@@ -65,6 +65,20 @@ img {
 #header, #footer {
 	text-shadow: 0 1px 0 rgba(255, 255, 255, .45);
 }
+#front #header, #front #footer {
+    max-width: 940px;
+    margin: 0 auto;
+}
+#front #header {
+    padding: 53px 15px 0 15px
+}
+#front #footer {
+    padding: 0 15px
+}
+#front #wrap {
+    max-width: 980px;
+    padding: 0
+}
 /* => HEADER */
 #header #logo a {
 	color: #373d42
@@ -161,6 +175,10 @@ img {
 }
 
 /* Content-wrap */
+#front #content-wrap {
+    border-spacing: 20px;
+    padding: 1px 0;
+}
 #content-wrap ul, #content-wrap ol {
 	margin: 0 0 11px 23px
 }
@@ -184,9 +202,9 @@ img {
 	overflow: hidden
 }
 #content-wrap .column, .left-column {
-	height: 339px;
-	float: left;
+	height: 310px;
 	margin-right: 20px;
+    display: table-cell
 }
 #content-wrap .column {
 	width: 270px;
@@ -480,6 +498,10 @@ h2 .date {
 }
 }
 @media only screen and (min-width: 601px) and (max-width: 1000px) {
+#front #content-wrap {
+    padding: 6px 0;
+    border-spacing: 15px
+}
 #content-wrap .column, .left-column {
  width: 45%;
  padding: 2%;
@@ -488,13 +510,25 @@ h2 .date {
 }
 @media only screen and (max-width: 600px) {
 #wrap {
- padding: 0 10px
+ padding: 0 10px !important
+}
+#front #header {
+    padding: 53px 0 0 0
+}
+#front #footer {
+    padding: 0
+}
+
+#front #content-wrap {
+    border-spacing: 0;
+    padding: 21px 0
 }
 #content-wrap .column, .left-column {
  width: 94%;
  padding: 3%;
  margin-right: 0;
  margin-bottom: 15px;
+ display: block;
  height: auto
 }
 h1 {
