@@ -14,5 +14,6 @@
 }
 #content-wrap .column, .left-column {
     float: left;
-    display: block
+    display: block;
+    height: auto
 }

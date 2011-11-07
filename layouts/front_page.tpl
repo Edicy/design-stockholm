@@ -15,7 +15,9 @@
   <!-- //header -->
   <div id="content-wrap" class="clear">
     <div class="left-column">{% content %}</div>
-    <div class="column last yellow">{% include "News" %}</div>
+    <div class="column last yellow">
+    {% if site.latest_articles.size > 0 %}{% include "News" %}{% else %}{% content name="sidebar" %}{% endif %}
+    </div>
   </div>
   <!-- //content-wrap -->
   <div id="footer" class="clear">{% include "Footer" %}</div>
