@@ -660,3 +660,8 @@ h2 {
  margin-bottom: 5px
 }
 }
+
+/* Voog cms style overrides */
+.edy-select select {
+	font-size: 11px;
+}
