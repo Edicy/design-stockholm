@@ -15,13 +15,13 @@
   </div>
   <!-- //header -->
   <div id="content-wrap" class="clear">
-    <div class="left-column" data-search-indexing-allowed="true">{% content %}</div>
-    <div class="column last yellow">
+    <div class="left-column content-hyphenate" data-search-indexing-allowed="true">{% content %}</div>
+    <div class="column last yellow content-hyphenate">
     {% if site.latest_articles.size > 0 %}{% include "News" %}{% else %}{% content name="sidebar" %}{% endif %}
     </div>
   </div>
   <!-- //content-wrap -->
-  <div id="footer" class="clear">{% include "Footer" %}</div>
+  <div id="footer" class="clear content-hyphenate">{% include "Footer" %}</div>
   <!-- //footer -->
 </div>
 <!-- //wrap -->

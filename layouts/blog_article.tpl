@@ -10,7 +10,7 @@
     {% include "Langmenu" %}
     <div class="hgroup clear">
       <h1 id="logo">{% editable site.header %}</h1>
-      <h2>{% content name="slogan" %}</h2>
+      <h2 class="content-hyphenate">{% content name="slogan" %}</h2>
     </div>
     {% include "Mainmenu" %}
     {% include "Submenu" %}
@@ -20,8 +20,8 @@
     <div class="center-column">
       <h2>{% editable article.title %} <span class="date">{{article.created_at | format_date:"long"}}</span></h2>
       <p><span class="author">{{article.author.name}}</span> / <a href="{% case article.comments_count %}{% when 0 %}{{article.url}}#comment-form{% else %}{{article.url}}#comments{% endcase %}">{% case article.comments_count %}{% when 0 %}{{"write_first_comment" | lc}}{% else %}{{"comments" | lc}} (<span class="edy-site-blog-comments-count">{{article.comments_count}}</span>){% endcase %}</a></p>
-      <div class="excerpt" data-search-indexing-allowed="true">{% editable article.excerpt %}</div>
-      <div data-search-indexing-allowed="true">{% editable article.body %}</div>
+      <div class="excerpt content-hyphenate" data-search-indexing-allowed="true">{% editable article.excerpt %}</div>
+      <div class=" content-hyphenate" data-search-indexing-allowed="true">{% editable article.body %}</div>
       
       
       {% if editmode %}
@@ -45,7 +45,7 @@
        {{article.comments_count}}</span>{% endcase %}</h2>
         <ul>
         {% for comment in article.comments %}
-          <li class="edy-site-blog-comment">
+          <li class="edy-site-blog-comment content-hyphenate">
             <p><span class="comment-author">{{comment.author}}</span> <span class="comment-date">{{comment.created_at | format_date:"short"}}</span>{% removebutton %}</p>
             {{comment.body_html}}
           </li>
@@ -79,7 +79,7 @@
     </div>
   </div>
   <!-- //content-wrap -->
-  <div id="footer" class="clear">{% include "Footer" %}</div>
+  <div id="footer" class="clear content-hyphenate">{% include "Footer" %}</div>
   <!-- //footer -->
 </div>
 <!-- //wrap -->

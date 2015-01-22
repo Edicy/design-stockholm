@@ -19,6 +19,13 @@ h1, h2, h3, #submenu a {
 #nav a, #langmenu a {
 	font-family: 'SansusWebissimoRegular', Helvetica, Arial, Verdana, sans-serif;
 }
+.content-hyphenate {
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
 h1 {
 	font-size: 48px;
 	line-height: 50px;

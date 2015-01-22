@@ -34,7 +34,7 @@
      <ul id="blog-list">
      {% for article in articles %}
         <li> <span class="date">{{article.created_at | format_date:"%d.%m"}}</span>
-          <div class="text-container">
+          <div class="text-container content-hyphenate">
             <h2><a href="{{article.url}}">{{article.title}}</a></h2>
             <p><span class="author">{{article.author.name}}</span> / <a href="{% case article.comments_count %}{% when 0 %}{{article.url}}#comment-form{% else %}{{article.url}}#comments{% endcase %}">{% case article.comments_count %}{% when 0 %}{{"write_first_comment" | lc}}{% else %}{{"comments" | lc}} ({{article.comments_count}}){% endcase %}</a></p>
              {{article.excerpt}}
@@ -45,7 +45,7 @@
     </div>
   </div>
   <!-- //content-wrap -->
-  <div id="footer" class="clear">{% include "Footer" %}</div>
+  <div id="footer" class="clear content-hyphenate">{% include "Footer" %}</div>
   <!-- //footer -->
 </div>
 <!-- //wrap -->

@@ -16,10 +16,10 @@
   </div>
   <!-- //header -->
   <div id="content-wrap" class="clear">
-    <div class="center-column" data-search-indexing-allowed="true">{% content %}</div>
+    <div class="center-column content-hyphenate" data-search-indexing-allowed="true">{% content %}</div>
   </div>
   <!-- //content-wrap -->
-  <div id="footer" class="clear">{% include "Footer" %}</div>
+  <div id="footer" class="clear content-hyphenate">{% include "Footer" %}</div>
   <!-- //footer -->
 </div>
 <!-- //wrap -->
