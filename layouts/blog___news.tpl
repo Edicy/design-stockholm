@@ -30,7 +30,7 @@
     {% endif %}
     
     
-    {% if editmode %}<p>{% addbutton class="add-article" %}</p>{% endif %}
+    {% if editmode %}<div>{% addbutton class="add-article" %}</div>{% endif %}
      <ul id="blog-list">
      {% for article in articles %}
         <li> <span class="date">{{article.created_at | format_date:"%d.%m"}}</span>
